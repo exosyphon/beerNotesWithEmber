@@ -1,0 +1,22 @@
+article#createbeer
+  h1 New Beer
+
+  if showError
+    .error A Beer must have a name.
+
+  form
+    fieldset
+      dl
+        dt: label Name:
+        dd: view Ember.TextField value=fields.name
+
+      dl
+        dt: label Beer Type:
+        dd: view Ember.TextField value=fields.beerType
+
+      dl
+        dt: label Notes:
+        dd: view Ember.TextField value=fields.notes
+
+    fieldset.actions
+      input type='submit' value='Create Beer' click="createBeer"

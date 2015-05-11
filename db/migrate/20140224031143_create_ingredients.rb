@@ -4,7 +4,7 @@ class CreateIngredients < ActiveRecord::Migration
       t.string :name
       t.string :amount
       t.string :unit
-      t.integer :addTime
+      t.integer :add_time
 
       t.timestamps
     end

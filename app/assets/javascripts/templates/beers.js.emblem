@@ -1,0 +1,11 @@
+article#beers
+  h1
+    | Beers
+    link-to 'beers.new' | New Beer
+    view Ember.TextField value=search placeholder="search" classNames="search"
+  ul
+    each beer in beers
+      link-to 'beer' beer tagName="li"
+         beer.name
+
+outlet

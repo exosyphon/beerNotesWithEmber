@@ -1,0 +1,28 @@
+article#createbeer
+  h1
+    model.name
+
+  form
+    fieldset
+      dl
+        dt: label Name:
+        dd: view Ember.TextField value=model.name
+
+      dl
+        dt: label Beer Type:
+        dd: view Ember.TextField value=model.beerType
+
+      dl
+        dt: label Notes:
+        dd: view Ember.TextField value=model.notes
+
+    fieldset.actions
+      a.delete href='#' click="delete" delete
+      input type='submit' value='Save Changes' click="saveChanges"
+      a.cancel href="#" click="cancel" cancel
+
+  p
+    if showUnsavedMessage
+      .unsaved unsaved changes
+    if isSaving
+      .saving saving...

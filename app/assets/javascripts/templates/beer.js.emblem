@@ -1,0 +1,20 @@
+outlet
+
+unless isEditing
+  article#createbeer
+    h1
+     model.name
+     link-to 'edit' 'beer.edit' model classNames='edit'
+
+    p
+      label Name:
+      br
+      model.name
+    p
+      label Beer Type:
+      br
+      model.beerType
+    p
+      label Notes:
+      br
+      model.notes

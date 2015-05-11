@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20140225043307) do
 
   create_table "beers", force: true do |t|
     t.string   "name"
-    t.string   "beerType"
+    t.string   "beer_type"
     t.string   "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140225043307) do
     t.string   "name"
     t.string   "amount"
     t.string   "unit"
-    t.integer  "addTime"
+    t.integer  "add_time"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "recipe_id"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20140225043307) do
   add_index "ingredients", ["recipe_id"], name: "index_ingredients_on_recipe_id", using: :btree
 
   create_table "recipes", force: true do |t|
-    t.string   "boilNotes"
+    t.string   "boil_notes"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "beer_id"
