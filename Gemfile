@@ -13,3 +13,7 @@ gem 'rails', '4.0.4'
 gem 'sass-rails', '4.0.3'
 gem 'uglifier', '2.5.3'
 gem 'shoulda-matchers', '1.0.0'
+
+group :test do
+  gem 'selenium-webdriver'
+end
